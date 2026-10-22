@@ -1,5 +1,5 @@
 <Solution>
-  <Folder Name="/src/">
+  <Folder Name="/MiApi/">
     <Project Path="MiApi/Application/Application.csproj" />
     <Project Path="MiApi/Domain/Domain.csproj" />
     <Project Path="MiApi/Infrastructure/Infrastructure.csproj" />

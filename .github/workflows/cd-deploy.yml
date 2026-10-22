@@ -16,7 +16,7 @@ jobs:
         dotnet-version: '8.0.x'
     # 1. Ejecutar el comando dotnet publish para generar los binarios de producción
     - name: Publicar Web API (.NET Publish)
-      run: dotnet publish MiApi/MiApi.csproj -c Release -o ./publish-output
+      run: dotnet publish MiApi/Presentation/Presentation.csproj -c Release -o ./publish-output
     # 2. Subir los archivos resultantes como un Artefacto en GitHub
     - name: Guardar Artefacto de Producción
       uses: actions/upload-artifact@v6
