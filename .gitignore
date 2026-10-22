@@ -55,6 +55,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+<<<<<<< HEAD
 
 # Visual Studio
 .vs/
+=======
+>>>>>>> origin/main
