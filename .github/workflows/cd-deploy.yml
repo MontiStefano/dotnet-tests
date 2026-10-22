@@ -1,0 +1,33 @@
+name: .NET CD & Artifact Release
+  on:
+    push:
+      branches: [ "main" ] # Solo se ejecuta cuando hay cambios confirmados en producción (main)
+  
+  jobs:
+    publish-and-package:
+      name: Empaquetar y Generar Artefacto
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout del código
+        uses: actions/checkout@v6
+      - name: Configurar .NET SDK
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '8.0.x'
+      # 1. Ejecutar el comando dotnet publish para generar los binarios de producción
+      - name: Publicar Web API (.NET Publish)
+        run: dotnet publish MiApi/MiApi.csproj -c Release -o ./publish-output
+      # 2. Subir los archivos resultantes como un Artefacto en GitHub
+      - name: Guardar Artefacto de Producción
+        uses: actions/upload-artifact@v6
+        with:
+          name: webapi-net-release
+          path: ./publish-output/
+      # 3. Simulación de envío de Webhook / Notificación
+      - name: Simular Webhook de Notificación
+        run: |
+        echo "==============================================="
+        echo "¡Despliegue y empaquetado completado con éxito!"
+        echo "Artefacto listo para distribución."
+        echo "Notificando al webhook del servidor..."
+        echo "==============================================="
