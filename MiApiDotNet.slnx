@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="MiApi/Application/Application.csproj" />
+    <Project Path="MiApi/Domain/Domain.csproj" />
+    <Project Path="MiApi/Infrastructure/Infrastructure.csproj" />
+    <Project Path="MiApi/Presentation/Presentation.csproj" />
+  </Folder>
+  <Project Path="MiApi.Tests/MiApi.Tests.csproj" Id="ea8f924d-16ab-4ead-8869-a1e7ac4779c5" />
+</Solution>
