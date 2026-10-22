@@ -26,8 +26,8 @@ jobs:
     # 3. Simulación de envío de Webhook / Notificación
     - name: Simular Webhook de Notificación
       run: |
-      echo "==============================================="
-      echo "¡Despliegue y empaquetado completado con éxito!"
-      echo "Artefacto listo para distribución."
-      echo "Notificando al webhook del servidor..."
-      echo "==============================================="
+        echo "==============================================="
+        echo "¡Despliegue y empaquetado completado con éxito!"
+        echo "Artefacto listo para distribución."
+        echo "Notificando al webhook del servidor..."
+        echo "==============================================="
